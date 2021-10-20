@@ -84,6 +84,10 @@
       else
           echo ".zprofile not found; $PATH may not be set properly."
       fi
+      export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/npmrc
+      export PROJECTS_HOME=$HOME/projects
+      export NODE_MIRROR=https://mirrors.ustc.edu.cn/node/
+      export PATH=$HOME/.local/bin:$PATH
       '';
     initExtra = ''
       # prompt
