@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     darwin = {
       url = "github:LnL7/nix-darwin/master";
+      # inherit nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -19,8 +20,11 @@
 	modules = [
 	./modules/mac.nix
 	./modules/global.nix
-        ./modules/home.nix
+        ./modules/generalpkgs.nix
+        ./modules/git.nix
+        ./modules/zsh.nix
         ./modules/emacs.nix
+        ./modules/alacritty.nix
         home-manager.darwinModule
         {
           home-manager = {
