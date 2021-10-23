@@ -1,5 +1,8 @@
 {pkgs, ...}:
-{
+let
+  # texlive bin path
+  tlbp = ~/.local/texlive/2021basic/bin/universal-darwin;
+in {
   # my own zsh
   home-manager.users.errenil.programs.zsh = {
     enable = true;
@@ -40,7 +43,6 @@
       la = "ls -a";
       lla = "ls -alhF";
     };
-    profileExtra = "typeset -U PATH path";
     initExtraFirst = ''
       ZPROFILE="$HOME/.config/zsh/.zprofile"
       if [[ -f $ZPROFILE ]]; then
@@ -51,7 +53,7 @@
       export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/npmrc
       export PROJECTS_HOME=$HOME/projects
       export NODE_MIRROR=https://mirrors.ustc.edu.cn/node/
-      export PATH=$HOME/.local/bin:$PATH
+      export PATH=$HOME/.local/bin:${toString tlbp}:$PATH
       '';
     initExtra = ''
       # prompt
@@ -69,5 +71,6 @@
       setopt AUTO_CD
       setopt HIST_VERIFY
       '';
+      profileExtra = "typeset -U PATH path";
   };
 }
