@@ -1,10 +1,11 @@
 {pkgs, lib, config, home-manager, nix-darwin, ...}: {
   home-manager.users.errenil.home.packages = with pkgs; [
     # cli
+    ghostscript
+    fzf
     imagemagick
     mpv
     neofetch
-    fzf
     openssl
     ranger
     ripgrep
@@ -15,6 +16,9 @@
     unzip
     wget
     youtube-dl
+
+    # gui
+    skim
 
     # clang collides with gcc so make it per-user
     ccls
