@@ -13,12 +13,10 @@ in {
       "$HOME/projects"
       "$HOME/projects/emacs.d"
       "$HOME/projects/org"
-      "$HOME/projects/vim"
     ];
     defaultKeymap = "emacs";
     dirHashes = {
       config = "$HOME/projetcs/voidrice/.config";
-      suckless = "$HOME/projetcs/suckless/";
       bks= "$HOME/Documents/books/";
     };
     dotDir = ".config/zsh";
@@ -34,10 +32,10 @@ in {
       rr = "ranger";
       e = "emacs -nw";
 
-      # open, source dotfiles 
+      # open, source dotfiles
       nz = "nvim $ZDOTDIR/.zshrc";
       sz = "source $ZDOTDIR/.zshrc";
-      
+
       ls = "ls -G";
       ll = "ls -alh";
       la = "ls -a";
@@ -60,7 +58,7 @@ in {
       if [ $(whoami) = 'errenil' ]; then
               PS1="%F{magenta}> %f"
           PS2="%F{yellow}>> %f"
-          RPS1="%(?..(%?%)) %B%F{lightgreen}%3c %f%b"
+          RPS1="%(?..%F{red}(%?%))%f %B%F{green}%3c %f%b"
       else
           PS1="%F{red}%n%f %~ "
           PS2="%F{yellow}>> %f"
