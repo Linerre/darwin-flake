@@ -5,6 +5,7 @@
     aspellDicts.en
     aspellDicts.en-science
     aspellDicts.en-computers
+    figlet
     ffmpeg
     fzf
     ghostscript
