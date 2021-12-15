@@ -47,6 +47,10 @@
     go_1_17
     # python
     python3
+    python39Packages.pip
+    python39Packages.pipx
+    # conda-shell is not supported on aanrch-6
+    # conda
 
     # js
     nodejs-16_x
