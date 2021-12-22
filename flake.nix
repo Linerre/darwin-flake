@@ -1,6 +1,6 @@
 {
   description = "My Darwin configuration";
-  
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     darwin = {
@@ -16,10 +16,10 @@
 
   outputs = { self, nixpkgs, darwin, home-manager, ... }@inputs: {
     darwinConfigurations.mello = darwin.lib.darwinSystem {
-	system = "aarch64-darwin";
-	modules = [
-	./modules/mac.nix
-	./modules/global.nix
+	    system = "aarch64-darwin";
+	    modules = [
+	      ./modules/mac.nix
+	      ./modules/global.nix
         ./modules/generalpkgs.nix
         ./modules/git.nix
         ./modules/zsh.nix
@@ -40,9 +40,9 @@
           nix = {
             package = pkgs.nixUnstable;
             extraOptions = ''
-              system = aarch64-darwin
-              experimental-features = nix-command flakes
-            '';
+                           system = aarch64-darwin
+                           experimental-features = nix-command flakes
+                           '';
           };
         })
       ];
