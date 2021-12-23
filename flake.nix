@@ -20,7 +20,7 @@
 	    modules = [
 	      ./modules/mac.nix
 	      ./modules/global.nix
-        ./modules/generalpkgs.nix
+        ./modules/pkgs.nix
         ./modules/git.nix
         ./modules/zsh.nix
         ./modules/emacs.nix

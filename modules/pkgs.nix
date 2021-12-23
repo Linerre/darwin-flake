@@ -13,10 +13,12 @@
     gnumake
     cmake
     imagemagick
+    #mongodb-4_2
     mpv
     htop
     neofetch
     openssl
+    postgresql_14
     ranger
     ripgrep
     sqlite
