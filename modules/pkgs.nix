@@ -13,7 +13,7 @@
     gnumake
     cmake
     imagemagick
-    #mongodb-4_2
+    maven
     mpv
     htop
     neofetch
