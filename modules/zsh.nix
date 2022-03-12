@@ -2,6 +2,7 @@
 let
   # texlive bin path
   tlbp = ~/.local/texlive/2021basic/bin/universal-darwin;
+  rust = ~/.cargo/bin;
 in {
   # my own zsh
   home-manager.users.errenil.programs.zsh = {
@@ -27,8 +28,6 @@ in {
       "...." = "cd ../../..";
 
       # open programms
-      v = "nvim";
-      n = "nvim";
       rr = "ranger";
       e = "emacs -nw";
 
@@ -51,7 +50,7 @@ in {
       export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/npmrc
       export PROJECTS_HOME=$HOME/projects
       export NODE_MIRROR=https://mirrors.ustc.edu.cn/node/
-      export PATH=$HOME/.local/bin:${toString tlbp}:$PATH
+      export PATH=${toString rust}:$HOME/.local/bin:${toString tlbp}:$PATH
       '';
     initExtra = ''
       # prompt

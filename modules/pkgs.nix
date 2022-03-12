@@ -36,8 +36,6 @@
     ccls
     clang
 
-    # editors
-    neovim
 
     # programming languages
     # clojure
@@ -56,5 +54,7 @@
 
     # js
     nodejs-16_x
+
+    # rust 1.55, far left behind the official 1.59.0!
   ];
 }
