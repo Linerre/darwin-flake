@@ -39,7 +39,7 @@
 
     # programming languages
     # clojure
-    openjdk16
+    jdk17_headless
     clojure
     leiningen
 

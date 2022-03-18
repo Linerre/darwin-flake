@@ -38,7 +38,6 @@
             config.allowUnfree = true;
           };
           nix = {
-            package = pkgs.nixUnstable;
             extraOptions = ''
                            system = aarch64-darwin
                            experimental-features = nix-command flakes
