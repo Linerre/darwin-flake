@@ -13,13 +13,13 @@
     gnumake
     cmake
     imagemagick
+    lf
     maven
     mpv
     htop
     neofetch
     openssl
     postgresql_14
-    ranger
     ripgrep
     sqlite
     tmux
